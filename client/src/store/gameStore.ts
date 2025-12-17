@@ -5,7 +5,6 @@ import {
   Move,
   Position,
   PieceColor,
-  TimeControl,
   ClockState,
   Board,
   createInitialGameState,
