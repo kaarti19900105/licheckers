@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Lichess-inspired muted colors */
+  --bg-primary: #312e2b;
+  --bg-secondary: #262421;
+  --bg-card: #262421;
+  --text-primary: #bababa;
+  --text-secondary: #8a8886;
+  --text-muted: #6a6966;
+  --border-color: #3d3a37;
+  
+  /* Board colors - Lichess brown theme */
+  --board-light: #f0d9b5;
+  --board-dark: #b58863;
+  --board-selected: #819669;
+  --board-move-hint: #83934c;
+  --board-last-move: #cdd26a;
+  
+  /* Piece colors */
+  --piece-red: #c33;
+  --piece-black: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4745;
+}
+
+/* Board styling */
+.board-container {
+  display: flex;
+  justify-content: center;
+}
+
+.board {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Piece styling */
+.piece {
+  transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  user-select: none;
+  touch-action: none;
+}
+
+.piece:hover {
+  transform: scale(1.05);
+}
+
+.piece.selected {
+  transform: scale(1.08);
+}
+
+.piece:active {
+  cursor: grabbing;
+}
+
+/* Valid move indicator */
+.valid-move-dot {
+  width: 32%;
+  height: 32%;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+}
+
+.valid-capture-ring {
+  width: 100%;
+  height: 100%;
+  border: 5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded font-medium transition-all duration-150;
+  @apply disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  background: #629924;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #74ad2c;
+}
+
+.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: #3d3a37;
+}
+
+.btn-danger {
+  background: #a33;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #b44;
+}
+
+/* Card styles */
+.card {
+  background: var(--bg-card);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+/* Last move highlight */
+.last-move {
+  background: #cdd26a !important;
+}
+
+/* Selected square */
+.selected-square {
+  background: #819669 !important;
+}
+
+/* Input styles */
+input, select {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #629924;
+}
