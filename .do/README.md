@@ -192,3 +192,4 @@ VITE_API_URL=https://your-backend-url.ondigitalocean.app
 - DigitalOcean Docs: https://docs.digitalocean.com/products/app-platform/
 - Community: https://www.digitalocean.com/community
 
+# Build fix
