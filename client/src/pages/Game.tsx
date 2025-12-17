@@ -89,7 +89,7 @@ export default function Game() {
     }
   };
 
-  const handleDrop = (from: Position, to: Position) => {
+  const handleDrop = (_from: Position, to: Position) => {
     // If viewing history, ignore
     if (viewingMoveIndex !== null) return;
     

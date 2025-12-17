@@ -4,7 +4,6 @@ import {
   GameConfig,
   Move,
   Position,
-  PieceColor,
   ClockState,
   Board,
   createInitialGameState,
