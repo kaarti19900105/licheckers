@@ -166,6 +166,11 @@ export function setupSocketHandlers(io: Server) {
       // Check if there's already someone waiting
       if (queue.size > 0) {
         const opponent = queue.values().next().value;
+        if (!opponent) {
+          queue.add(socket.id);
+          socket.emit('matchmaking:waiting');
+          return;
+        }
         queue.delete(opponent);
 
         // Create game
