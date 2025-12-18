@@ -61,9 +61,6 @@ export default function Home() {
           <h1 className="text-xl font-bold text-text-primary">
             licheckers<span className="text-accent-green">.org</span>
           </h1>
-          <nav className="flex gap-2">
-            <button className="btn btn-secondary text-sm">Sign In</button>
-          </nav>
         </div>
       </header>
 
