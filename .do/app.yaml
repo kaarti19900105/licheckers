@@ -9,7 +9,7 @@ services:
       branch: main
       deploy_on_push: true
     source_dir: /
-    build_command: npm install && cd client && npm run build
+    build_command: npm install --include=dev && cd client && npm run build
     run_command: cd client && npm run preview -- --host 0.0.0.0 --port 4173
     environment_slug: node-js
     instance_count: 1
@@ -31,7 +31,7 @@ services:
       branch: main
       deploy_on_push: true
     source_dir: /
-    build_command: npm install && cd server && npm run build
+    build_command: npm install --include=dev && cd shared && npm run build && cd ../server && npm run build
     run_command: cd server && npm start
     environment_slug: node-js
     instance_count: 1
