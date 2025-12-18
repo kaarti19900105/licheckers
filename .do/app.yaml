@@ -31,7 +31,7 @@ services:
       branch: main
       deploy_on_push: true
     source_dir: /
-    build_command: npm install --include=dev && cd shared && npm run build && cd ../server && npm run build
+    build_command: npm install --include=dev && cd server && npm run build
     run_command: cd server && npm start
     environment_slug: node-js
     instance_count: 1
