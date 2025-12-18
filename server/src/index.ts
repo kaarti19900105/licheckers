@@ -53,6 +53,6 @@ setupSocketHandlers(io);
 
 // Start server
 httpServer.listen(PORT, () => {
-  console.log(`🎮 Licheckers server running on http://localhost:${PORT}`);
+  console.log(`🎮 checkers.org server running on http://localhost:${PORT}`);
 });
 

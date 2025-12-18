@@ -59,7 +59,7 @@ export default function Home() {
       <header className="py-4 px-4 border-b border-border">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <h1 className="text-xl font-bold text-text-primary">
-            licheckers<span className="text-accent-green">.org</span>
+            checkers<span className="text-accent-green">.org</span>
           </h1>
         </div>
       </header>

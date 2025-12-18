@@ -161,7 +161,7 @@ export default function Game() {
           >
             <ArrowLeft size={18} />
             <span className="font-bold text-text-primary">
-              licheckers<span className="text-accent-green">.org</span>
+              checkers<span className="text-accent-green">.org</span>
             </span>
           </button>
           <button
